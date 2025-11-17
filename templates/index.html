@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AI Resume Assistant</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width: 760px; margin: 24px auto; padding: 0 16px; }
+      label { display:block; margin-top:12px; font-weight:700 }
+      input, textarea, select { width:100%; padding:8px; margin-top:6px; box-sizing:border-box }
+      button { margin-top:12px; padding:10px 14px }
+      pre { background:#f6f8fa; padding:12px; overflow:auto }
+    </style>
+  </head>
+  <body>
+    <h1>AI Resume Assistant</h1>
+    <p>Fill the details below and click <strong>Generate</strong>. The app will call an AI model (OpenAI or Anthropic) to produce resume output. Set keys in `.env`.</p>
+
+    <label for="name">Name</label>
+    <input id="name" />
+
+    <label for="title">Current title / Target title</label>
+    <input id="title" />
+
+    <label for="experience">Experience (brief, paste your work history or achievements)</label>
+    <textarea id="experience" rows="5"></textarea>
+
+    <label for="skills">Skills (comma separated)</label>
+    <input id="skills" />
+
+    <label for="target_job">Target job / role</label>
+    <input id="target_job" />
+
+    <label for="tone">Tone</label>
+    <select id="tone">
+      <option>professional</option>
+      <option>concise</option>
+      <option>ambitious</option>
+      <option>friendly</option>
+    </select>
+
+    <button id="generate">Generate Resume</button>
+
+    <h2>Output</h2>
+    <div id="output"><em>No output yet</em></div>
+
+    <script src="/static/main.js"></script>
+  </body>
+</html>
