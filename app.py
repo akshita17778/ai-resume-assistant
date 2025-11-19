@@ -10,11 +10,11 @@ app = Flask(__name__, static_folder='static', template_folder='templates')
 
 PROVIDER = os.getenv('PROVIDER', 'openai').lower()
 
-# OpenAI defaults
+
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 OPENAI_MODEL = os.getenv('OPENAI_MODEL', 'gpt-4o-mini')
 
-# Anthropic defaults (for Claude Haiku or other Claude models)
+
 ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY')
 ANTHROPIC_MODEL = os.getenv('ANTHROPIC_MODEL', 'claude-haiku-4.5')
 
